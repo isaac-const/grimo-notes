@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grimo Notes</title>
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('grimo-theme'); } catch (e) {}
+        var ok = ['dark', 'white', 'rose-black', 'rose-white', 'blue-dark', 'blue-white'];
+        if (ok.indexOf(t) < 0) t = matchMedia('(prefers-color-scheme: light)').matches ? 'white' : 'dark';
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
