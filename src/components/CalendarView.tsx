@@ -29,7 +29,7 @@ export function CalendarView({ ideas, folderHue }: { ideas: Idea[]; folderHue: n
       </div>
       <div className="overflow-hidden rounded-[22px] border border-line bg-surface" role="grid" aria-label="Calendário de prazos">
         <div className="grid grid-cols-7 border-b border-line bg-surface-2/60" role="row">
-          {DAYS.map((d) => <div key={d} role="columnheader" className="px-3 py-2 font-mono text-[11px] uppercase tracking-[.08em] text-muted">{d}</div>)}
+          {DAYS.map((d) => <div key={d} role="columnheader" className="px-3 py-2 font-sans text-[11px] uppercase tracking-[.08em] text-muted">{d}</div>)}
         </div>
         <div>
           {Array.from({ length: 6 }, (_, w) => grid.slice(w * 7, w * 7 + 7)).map((week) => (
@@ -38,7 +38,7 @@ export function CalendarView({ ideas, folderHue }: { ideas: Idea[]; folderHue: n
             const list = map.get(c.date) ?? [];
             return (
               <div key={c.date} role="gridcell" data-date={c.date} className={`min-h-[104px] border-b border-r border-line p-1.5 ${c.inMonth ? '' : 'bg-bg/40 text-muted'}`}>
-                <span className={`mb-1 inline-grid h-6 min-w-6 place-items-center rounded-full px-1 font-mono text-xs ${c.date === today ? 'bg-accent text-accent-ink' : ''}`}>{Number(c.date.slice(8))}</span>
+                <span className={`mb-1 inline-grid h-6 min-w-6 place-items-center rounded-full px-1 font-sans text-xs ${c.date === today ? 'bg-accent text-accent-ink' : ''}`}>{Number(c.date.slice(8))}</span>
                 <div className="grid gap-1">
                   {list.map((i) => (
                     <button key={i.id} type="button" data-idea={i.id} onClick={() => go({ name: 'idea', id: i.id })} style={hueStyle(hues[i.id] ?? folderHue)} className="cat-soft flex items-center gap-1.5 truncate rounded-lg px-2 py-1 text-left text-xs text-[color:var(--ink)]">

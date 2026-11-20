@@ -1,11 +1,10 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/hanken-grotesk';
-@import '@fontsource-variable/familjen-grotesk';
+@import '@fontsource-variable/figtree';
 @import '@fontsource-variable/geist-mono';
 
 @theme {
-  --font-sans: 'Hanken Grotesk Variable', system-ui, sans-serif;
-  --font-display: 'Familjen Grotesk Variable', system-ui, sans-serif;
+  --font-sans: 'Figtree Variable', system-ui, sans-serif;
+  --font-display: 'Figtree Variable', system-ui, sans-serif;
   --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
   --color-bg: var(--bg);
   --color-surface: var(--surface);

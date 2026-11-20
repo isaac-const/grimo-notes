@@ -4,7 +4,7 @@
 
 Caderno de ideias local para desktop (Linux e Windows). Pastas por assunto, ideias com tópicos, categorias e prazos, tudo guardado no seu computador, sem conta e sem nuvem.
 
-**Status: em desenvolvimento.** A v1 do plano (fases 1 a 3) está implementada. Faltam moodboard, captura rápida, histórico de versões, exportação e instaladores.
+**Status: versão 0.1.** O app já funciona de ponta a ponta. Ainda faltam moodboard, captura rápida em janela pequena, histórico de versões e instaladores.
 
 ## Em uso
 
@@ -94,7 +94,7 @@ Os prints são gerados por `tests/e2e/demo.spec.ts`, o mesmo teste que percorre 
 - **Quatro visões** por pasta (cartões, lista, kanban e calendário), **galeria** global e **busca**.
 - **Configurações:** aparência, editor, categorias, backup, exportar e importar.
 - Início com captura rápida, o que vence na semana, fixadas, pastas e recentes.
-- Seis temas, com revelação circular. Contraste conferido com axe nos seis. Respeita `prefers-reduced-motion`. Fontes do KaniBox (Familjen Grotesk, Hanken Grotesk e Geist Mono).
+- Seis temas, com revelação circular. Contraste conferido com axe nos seis. Respeita `prefers-reduced-motion`. Fonte Figtree (a mesma do meu app mobile, o Kita Finances) e Geist Mono só nos blocos de código.
 - Sem atalhos de teclado globais: tudo acessível pelo mouse e pelo menu `/` dentro do editor.
 - Dados em SQLite (migrações versionadas). No navegador, um armazenamento em memória cumpre o mesmo contrato, o que permite testar sem abrir o app.
 
@@ -117,4 +117,4 @@ Tauri 2, React 19, TypeScript, Vite, Tailwind v4, Motion, Zustand, TipTap (edito
 
 ## Próximos passos
 
-Moodboard livre, captura rápida em janela pequena, histórico de versões, exportação para Markdown e backup, instaladores (AppImage, deb e Windows) e galeria dentro do documento. O plano completo está em [`PLANO.md`](PLANO.md).
+Moodboard livre, captura rápida em janela pequena, histórico de versões, instaladores (AppImage, deb e Windows) e galeria dentro do documento.

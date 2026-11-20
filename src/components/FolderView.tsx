@@ -33,7 +33,7 @@ export function FolderView({ id }: { id: string }) {
           <Icon name={folder.icon} size={26} />
         </span>
         <div className="min-w-0 flex-1">
-          <p className="font-mono text-xs uppercase tracking-[.08em] text-muted">{plural(list.length, 'ideia', 'ideias')}</p>
+          <p className="font-sans text-xs uppercase tracking-[.08em] text-muted">{plural(list.length, 'ideia', 'ideias')}</p>
           <h1 className="truncate font-display text-5xl leading-none">{folder.name}</h1>
         </div>
         <div className="flex items-center gap-2">

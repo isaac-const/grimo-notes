@@ -40,7 +40,7 @@ export function Gallery() {
     <div className="mx-auto grid max-w-6xl gap-8 pb-16">
       <header className="flex flex-wrap items-end gap-4">
         <div className="min-w-0 flex-1">
-          <p className="font-mono text-xs uppercase tracking-[.08em] text-muted">{items.length} {items.length === 1 ? 'item' : 'itens'}</p>
+          <p className="font-sans text-xs uppercase tracking-[.08em] text-muted">{items.length} {items.length === 1 ? 'item' : 'itens'}</p>
           <h1 className="font-display text-5xl leading-none">Galeria</h1>
         </div>
         <label className="flex items-center gap-2 text-sm text-muted">

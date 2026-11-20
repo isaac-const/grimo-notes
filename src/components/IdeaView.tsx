@@ -14,7 +14,7 @@ function useDebounced<T extends unknown[]>(fn: (...a: T) => void, ms: number) {
   return useMemo(() => (...a: T) => (clearTimeout(t.current), (t.current = setTimeout(() => f.current(...a), ms))), [ms]);
 }
 
-const Label = ({ children }: { children: React.ReactNode }) => <h2 className="mb-2.5 font-mono text-[11px] uppercase tracking-[.08em] text-muted">{children}</h2>;
+const Label = ({ children }: { children: React.ReactNode }) => <h2 className="mb-2.5 font-sans text-[11px] uppercase tracking-[.08em] text-muted">{children}</h2>;
 
 export function IdeaView({ id }: { id: string }) {
   const { ideas, folders, categories, hues, go, patchIdea, removeIdea, refreshHues } = useApp();
@@ -63,7 +63,7 @@ export function IdeaView({ id }: { id: string }) {
         <button type="button" onClick={() => go({ name: 'folder', id: folder.id })} className="flex items-center gap-1.5 hover:text-ink">
           <Icon name="back" size={16} /> {folder.name}
         </button>
-        <span className="ml-auto font-mono text-xs" aria-live="polite">{saved ? 'Salvo' : 'Salvando…'}</span>
+        <span className="ml-auto font-sans text-xs" aria-live="polite">{saved ? 'Salvo' : 'Salvando…'}</span>
         <button type="button" onClick={togglePanel} aria-pressed={panel} aria-label={panel ? 'Esconder propriedades' : 'Mostrar propriedades'} title="Propriedades" className="grid h-9 w-9 place-items-center rounded-xl text-muted hover:bg-surface-2 hover:text-ink aria-pressed:text-ink">
           <Icon name="panel" className="rotate-180" />
         </button>
@@ -116,7 +116,7 @@ export function IdeaView({ id }: { id: string }) {
             </section>
 
             <section aria-labelledby="h-cats">
-              <h2 id="h-cats" className="mb-2.5 font-mono text-[11px] uppercase tracking-[.08em] text-muted">Categorias</h2>
+              <h2 id="h-cats" className="mb-2.5 font-sans text-[11px] uppercase tracking-[.08em] text-muted">Categorias</h2>
               <div className="grid gap-3">
                 {groups.map((g) => (
                   <div key={g}>
@@ -139,8 +139,8 @@ export function IdeaView({ id }: { id: string }) {
 
             <section aria-labelledby="h-topics">
               <div className="mb-2.5 flex items-baseline gap-3">
-                <h2 id="h-topics" className="font-mono text-[11px] uppercase tracking-[.08em] text-muted">Tópicos</h2>
-                {topics.length > 0 && <span className="font-mono text-xs text-muted">{done}/{topics.length}</span>}
+                <h2 id="h-topics" className="font-sans text-[11px] uppercase tracking-[.08em] text-muted">Tópicos</h2>
+                {topics.length > 0 && <span className="font-sans text-xs text-muted">{done}/{topics.length}</span>}
               </div>
               <ul className="grid gap-1">
                 {topics.map((t) => (

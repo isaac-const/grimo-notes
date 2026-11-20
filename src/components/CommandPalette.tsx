@@ -23,7 +23,7 @@ export function CommandPalette({ onNewFolder }: { onNewFolder: () => void }) {
           <Command.Input autoFocus value={q} onValueChange={setQ} placeholder="Buscar ideias ou ir para uma pasta" className="h-14 flex-1 bg-transparent text-base outline-none placeholder:text-muted" />
           <kbd className="rounded-md border border-line px-1.5 py-0.5 font-mono text-[11px] text-muted">Esc</kbd>
         </div>
-        <Command.List className="max-h-[52vh] overflow-y-auto p-2 [&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:pb-1 [&_[cmdk-group-heading]]:pt-3 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-[11px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[.08em] [&_[cmdk-group-heading]]:text-muted">
+        <Command.List className="max-h-[52vh] overflow-y-auto p-2 [&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:pb-1 [&_[cmdk-group-heading]]:pt-3 [&_[cmdk-group-heading]]:font-sans [&_[cmdk-group-heading]]:text-[11px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[.08em] [&_[cmdk-group-heading]]:text-muted">
           <Command.Empty className="px-4 py-8 text-center text-sm text-muted">Nada encontrado.</Command.Empty>
           {q.trim() && hits.length > 0 && (
             <Command.Group heading="Ideias">

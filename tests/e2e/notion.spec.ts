@@ -255,12 +255,12 @@ test('painel de propriedades recolhe e lembra a escolha', async ({ page }) => {
   await expect(page.getByRole('complementary', { name: 'Propriedades' })).toBeVisible();
 });
 
-test('as fontes são as do KaniBox', async ({ page }) => {
+test('a fonte é a Figtree, a mesma do app mobile', async ({ page }) => {
   await open(page);
   const f = await page.evaluate(() => ({ title: getComputedStyle(document.querySelector('input[aria-label="Título da ideia"]')!).fontFamily, body: getComputedStyle(document.querySelector('.grimo-doc')!).fontFamily, mono: getComputedStyle(document.querySelector('[aria-live="polite"]')!).fontFamily }));
-  expect(f.title).toContain('Familjen Grotesk');
-  expect(f.body).toContain('Hanken Grotesk');
-  expect(f.mono).toContain('Geist Mono');
+  expect(f.title).toContain('Figtree');
+  expect(f.body).toContain('Figtree');
+  expect(f.mono).toContain('Figtree');
   expect(`${f.title}${f.body}`).not.toContain('Newsreader');
 });
 

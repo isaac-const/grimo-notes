@@ -34,7 +34,7 @@ export function Sidebar({ onNewFolder }: { onNewFolder: () => void }) {
           <Icon name="image" />
           {!collapsed && 'Galeria'}
         </button>
-        {!collapsed && <div className="px-3 pb-1 pt-4 font-mono text-[11px] uppercase tracking-[.08em] text-muted">Pastas</div>}
+        {!collapsed && <div className="px-3 pb-1 pt-4 font-sans text-[11px] uppercase tracking-[.08em] text-muted">Pastas</div>}
         {collapsed && <div className="my-2 h-px bg-line" />}
         {folders.map((f) => (
           <button key={f.id} type="button" data-folder={f.id} onClick={() => go({ name: 'folder', id: f.id })} aria-current={active(f.id) ? 'page' : undefined} title={f.name} className="group flex h-10 items-center gap-3 rounded-xl px-3 text-sm text-muted hover:bg-surface-2 hover:text-ink aria-[current=page]:bg-surface-2 aria-[current=page]:text-ink">
@@ -44,7 +44,7 @@ export function Sidebar({ onNewFolder }: { onNewFolder: () => void }) {
             {!collapsed && (
               <>
                 <span className="truncate">{f.name}</span>
-                <span className="ml-auto font-mono text-xs text-muted">{count(f.id)}</span>
+                <span className="ml-auto font-sans text-xs text-muted">{count(f.id)}</span>
               </>
             )}
           </button>

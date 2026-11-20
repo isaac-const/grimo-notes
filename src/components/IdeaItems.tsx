@@ -18,7 +18,7 @@ const spot = (e: MouseEvent<HTMLElement>) => {
   e.currentTarget.style.setProperty('--my', `${e.clientY - r.top}px`);
 };
 
-const Status = ({ s }: { s: Idea['status'] }) => <span className="rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-muted">{STATUS_LABEL[s]}</span>;
+const Status = ({ s }: { s: Idea['status'] }) => <span className="rounded-full border border-line px-2.5 py-0.5 font-sans text-[11px] text-muted">{STATUS_LABEL[s]}</span>;
 
 export function IdeaCard({ idea, showFolder }: { idea: Idea; showFolder?: boolean }) {
   const { go } = useApp();
@@ -53,8 +53,8 @@ export function IdeaCard({ idea, showFolder }: { idea: Idea; showFolder?: boolea
       {idea.doc && <p className="line-clamp-2 text-sm leading-relaxed text-muted">{excerpt(idea.doc)}</p>}
       <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1.5 pt-1">
         <Status s={idea.status} />
-        {due && <span className={`font-mono text-[11px] ${due.late ? 'text-[oklch(.68_.17_25)]' : 'text-muted'}`}>{due.text}</span>}
-        <span className="ml-auto font-mono text-[11px] text-muted">{ago(idea.updatedAt)}</span>
+        {due && <span className={`font-sans text-[11px] ${due.late ? 'text-[oklch(.68_.17_25)]' : 'text-muted'}`}>{due.text}</span>}
+        <span className="ml-auto font-sans text-[11px] text-muted">{ago(idea.updatedAt)}</span>
       </div>
     </motion.button>
   );
@@ -85,8 +85,8 @@ export function IdeaRow({ idea, showFolder }: { idea: Idea; showFolder?: boolean
       </span>
       {showFolder && folder && <span className="hidden text-xs text-muted md:block">{folder.name}</span>}
       <Status s={idea.status} />
-      {due && <span className={`hidden font-mono text-[11px] sm:block ${due.late ? 'text-[oklch(.68_.17_25)]' : 'text-muted'}`}>{due.text}</span>}
-      <span className="w-20 text-right font-mono text-[11px] text-muted">{ago(idea.updatedAt)}</span>
+      {due && <span className={`hidden font-sans text-[11px] sm:block ${due.late ? 'text-[oklch(.68_.17_25)]' : 'text-muted'}`}>{due.text}</span>}
+      <span className="w-20 text-right font-sans text-[11px] text-muted">{ago(idea.updatedAt)}</span>
     </motion.button>
   );
 }

@@ -32,6 +32,7 @@ test('caso de uso completo com dados de exemplo e prints de cada função', asyn
   await page.locator('#loadExample').click();
   await expect(page.locator('h1')).toHaveText('Suas ideias');
   await expect(page.getByRole('status')).toContainText('Dados de exemplo');
+  await page.evaluate(() => { document.getElementById('main')!.scrollTop = 0; });
   await settle(page, 800);
   await page.screenshot({ path: P('01-inicio') });
 

@@ -12,7 +12,7 @@ function Card({ idea, hue, dragging }: { idea: Idea; hue: number; dragging?: boo
     <div className={`relative overflow-hidden rounded-2xl border bg-surface p-4 text-left transition-[transform,border-color] ${dragging ? 'scale-[1.02] border-accent shadow-[0_6px_16px_rgba(0,0,0,.16)]' : 'border-line hover:border-[color-mix(in_oklab,var(--ink)_28%,var(--line))]'}`} style={hueStyle(hue)}>
       <span className="ribbon cat-fill" style={{ right: 16, height: 22 }} aria-hidden="true" />
       <h4 className="pr-8 font-display text-[17px] leading-snug">{idea.pinned && <Icon name="pin" size={12} className="mr-1 inline text-muted" />}{idea.title}</h4>
-      {due && <p className={`mt-2 font-mono text-[11px] ${due.late ? 'text-[oklch(.68_.17_25)]' : 'text-muted'}`}>{due.text}</p>}
+      {due && <p className={`mt-2 font-sans text-[11px] ${due.late ? 'text-[oklch(.68_.17_25)]' : 'text-muted'}`}>{due.text}</p>}
     </div>
   );
 }
@@ -32,8 +32,8 @@ function Column({ status, ideas, hueOf }: { status: Status; ideas: Idea[]; hueOf
   return (
     <section ref={setNodeRef} data-col={status} aria-label={STATUS_LABEL[status]} className={`flex min-h-[280px] min-w-[176px] flex-1 basis-0 flex-col gap-3 rounded-[22px] border p-3 transition-colors ${isOver ? 'border-accent bg-surface-2' : 'border-line bg-surface/50'}`}>
       <header className="flex items-baseline justify-between px-2 pt-1">
-        <h3 className="font-mono text-xs uppercase tracking-[.08em] text-muted">{STATUS_LABEL[status]}</h3>
-        <span className="font-mono text-xs text-muted">{ideas.length}</span>
+        <h3 className="font-sans text-xs uppercase tracking-[.08em] text-muted">{STATUS_LABEL[status]}</h3>
+        <span className="font-sans text-xs text-muted">{ideas.length}</span>
       </header>
       {ideas.map((i) => <Draggable key={i.id} idea={i} hue={hueOf(i)} />)}
       {ideas.length === 0 && <p className="px-2 py-6 text-center text-xs text-muted">Solte uma ideia aqui</p>}

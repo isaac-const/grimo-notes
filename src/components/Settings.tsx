@@ -81,7 +81,7 @@ export function Settings({ onNewFolder }: { onNewFolder: () => void }) {
   return (
     <div className="mx-auto grid max-w-3xl gap-6 pb-20">
       <header>
-        <p className="font-mono text-xs uppercase tracking-[.08em] text-muted">Preferências</p>
+        <p className="font-sans text-xs uppercase tracking-[.08em] text-muted">Preferências</p>
         <h1 className="font-display text-5xl font-bold leading-none tracking-[-.025em]">Configurações</h1>
       </header>
 
@@ -105,7 +105,7 @@ export function Settings({ onNewFolder }: { onNewFolder: () => void }) {
       <Card id="s-editor" title="Editor">
         <Row label="Tamanho do texto"><Seg label="Tamanho do texto" value={prefs.editorSize} set={set('editorSize')} options={[['s', 'Pequeno'], ['m', 'Médio'], ['l', 'Grande']]} /></Row>
         <Row label="Largura da página" hint="Quanto espaço o texto ocupa."><Seg label="Largura da página" value={prefs.editorWidth} set={set('editorWidth')} options={[['narrow', 'Estreita'], ['normal', 'Padrão'], ['wide', 'Larga']]} /></Row>
-        <Row label="Fonte do texto"><Seg label="Fonte do texto" value={prefs.bodyFont} set={set('bodyFont')} options={[['sans', 'Hanken'], ['display', 'Familjen'], ['mono', 'Geist Mono']]} /></Row>
+        <Row label="Fonte do texto"><Seg label="Fonte do texto" value={prefs.bodyFont} set={set('bodyFont')} options={[['sans', 'Figtree'], ['mono', 'Geist Mono']]} /></Row>
         <div className="py-4">
           <p className="grimo-doc !min-h-0 !pb-0 rounded-2xl border border-dashed border-line px-5 py-4 !text-[length:var(--doc-size)]" aria-label="Prévia do texto" style={{ fontFamily: 'var(--doc-font)' }}>
             Assim o texto das suas ideias aparece. Mude as opções acima e veja aqui.

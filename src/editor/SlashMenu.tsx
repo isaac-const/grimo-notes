@@ -92,7 +92,7 @@ export function SlashMenu({ editor, ctx }: { editor: Editor; ctx: SlashCtx }) {
     <div role="listbox" aria-label="Inserir bloco" className="fixed z-40 max-h-[320px] w-72 overflow-y-auto rounded-2xl border border-line bg-surface p-1.5 shadow-[var(--shadow)]" style={{ left: Math.min(state.x, innerWidth - 300), top: state.y > innerHeight - 340 ? Math.max(8, state.y - 340) : top }}>
       {items.map((i, n) => (
         <div key={i.id}>
-          {(n === 0 || items[n - 1].group !== i.group) && <div className="px-3 pb-1 pt-2 font-mono text-[10.5px] uppercase tracking-[.08em] text-muted">{i.group}</div>}
+          {(n === 0 || items[n - 1].group !== i.group) && <div className="px-3 pb-1 pt-2 font-sans text-[10.5px] uppercase tracking-[.08em] text-muted">{i.group}</div>}
           <button type="button" role="option" aria-selected={n === sel} onMouseDown={(e) => (e.preventDefault(), run(i))} onMouseEnter={() => setSel(n)} className="flex w-full items-baseline justify-between gap-3 rounded-xl px-3 py-1.5 text-left text-sm aria-selected:bg-surface-2">
             <span>{i.label}</span>
             <span className="truncate text-xs text-muted">{i.hint}</span>

@@ -76,7 +76,7 @@ export function Home({ onNewFolder }: { onNewFolder: () => void }) {
       )}
       <header className="grid gap-5 pt-2 md:grid-cols-[1fr_minmax(320px,420px)] md:items-end">
         <div>
-          <p className="font-mono text-xs uppercase tracking-[.08em] text-muted">{plural(ideas.length, 'ideia', 'ideias')} em {plural(folders.length, 'pasta', 'pastas')}</p>
+          <p className="font-sans text-xs uppercase tracking-[.08em] text-muted">{plural(ideas.length, 'ideia', 'ideias')} em {plural(folders.length, 'pasta', 'pastas')}</p>
           <h1 className="mt-2 font-display text-5xl leading-none">Suas ideias</h1>
         </div>
         <form onSubmit={capture} className="flex items-center gap-2 rounded-full border border-line bg-surface p-1.5 pl-4 shadow-[var(--shadow)] focus-within:border-accent" aria-label="Captura rápida">
@@ -96,7 +96,7 @@ export function Home({ onNewFolder }: { onNewFolder: () => void }) {
 
       {soon.length > 0 && (
         <section aria-labelledby="h-soon" className="grid gap-4">
-          <h2 id="h-soon" className="font-mono text-xs uppercase tracking-[.08em] text-muted">Vencendo na semana</h2>
+          <h2 id="h-soon" className="font-sans text-xs uppercase tracking-[.08em] text-muted">Vencendo na semana</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <AnimatePresence mode="popLayout">{soon.map((i) => <IdeaCard key={i.id} idea={i} showFolder />)}</AnimatePresence>
           </div>
@@ -105,7 +105,7 @@ export function Home({ onNewFolder }: { onNewFolder: () => void }) {
 
       {pinned.length > 0 && (
         <section aria-labelledby="h-pin" className="grid gap-4">
-          <h2 id="h-pin" className="font-mono text-xs uppercase tracking-[.08em] text-muted">Fixadas</h2>
+          <h2 id="h-pin" className="font-sans text-xs uppercase tracking-[.08em] text-muted">Fixadas</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <AnimatePresence mode="popLayout">{pinned.map((i) => <IdeaCard key={i.id} idea={i} showFolder />)}</AnimatePresence>
           </div>
@@ -113,7 +113,7 @@ export function Home({ onNewFolder }: { onNewFolder: () => void }) {
       )}
 
       <section aria-labelledby="h-folders" className="grid gap-4">
-        <h2 id="h-folders" className="font-mono text-xs uppercase tracking-[.08em] text-muted">Pastas</h2>
+        <h2 id="h-folders" className="font-sans text-xs uppercase tracking-[.08em] text-muted">Pastas</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {folders.map((f) => {
             const n = ideas.filter((i) => i.folderId === f.id).length;
@@ -122,7 +122,7 @@ export function Home({ onNewFolder }: { onNewFolder: () => void }) {
                 <span className="cat-ink"><Icon name={f.icon} size={26} /></span>
                 <span>
                   <b className="block font-display text-2xl leading-tight text-[color:var(--ink)]">{f.name}</b>
-                  <span className="font-mono text-xs text-[color:var(--ink)] opacity-70">{plural(n, 'ideia', 'ideias')}</span>
+                  <span className="font-sans text-xs text-[color:var(--ink)] opacity-70">{plural(n, 'ideia', 'ideias')}</span>
                 </span>
               </button>
             );
@@ -134,7 +134,7 @@ export function Home({ onNewFolder }: { onNewFolder: () => void }) {
       </section>
 
       <section aria-labelledby="h-rec" className="grid gap-4">
-        <h2 id="h-rec" className="font-mono text-xs uppercase tracking-[.08em] text-muted">Recentes</h2>
+        <h2 id="h-rec" className="font-sans text-xs uppercase tracking-[.08em] text-muted">Recentes</h2>
         {recent.length === 0 && pinned.length === 0 ? (
           <p className="rounded-2xl border border-dashed border-line p-8 text-center text-muted">Nada por aqui ainda. Anote a primeira ideia na caixa de cima.</p>
         ) : (

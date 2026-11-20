@@ -1,7 +1,7 @@
 export interface Prefs {
   editorSize: 's' | 'm' | 'l';
   editorWidth: 'narrow' | 'normal' | 'wide';
-  bodyFont: 'sans' | 'display' | 'mono';
+  bodyFont: 'sans' | 'mono';
   reduceMotion: boolean;
   panelDefault: boolean;
   defaultView: 'cards' | 'list' | 'kanban' | 'calendar';
@@ -18,7 +18,7 @@ export function sanitizePrefs(raw: unknown): Prefs {
   return {
     editorSize: pick(r.editorSize, ['s', 'm', 'l'], DEFAULT_PREFS.editorSize),
     editorWidth: pick(r.editorWidth, ['narrow', 'normal', 'wide'], DEFAULT_PREFS.editorWidth),
-    bodyFont: pick(r.bodyFont, ['sans', 'display', 'mono'], DEFAULT_PREFS.bodyFont),
+    bodyFont: pick(r.bodyFont, ['sans', 'mono'], DEFAULT_PREFS.bodyFont),
     reduceMotion: typeof r.reduceMotion === 'boolean' ? r.reduceMotion : DEFAULT_PREFS.reduceMotion,
     panelDefault: typeof r.panelDefault === 'boolean' ? r.panelDefault : DEFAULT_PREFS.panelDefault,
     defaultView: pick(r.defaultView, ['cards', 'list', 'kanban', 'calendar'], DEFAULT_PREFS.defaultView),
@@ -43,7 +43,7 @@ export function savePrefs(p: Prefs) {
 
 const SIZE = { s: '15.5px', m: '17px', l: '19px' } as const;
 const WIDTH = { narrow: '620px', normal: '720px', wide: '880px' } as const;
-const FONT = { sans: "var(--font-sans)", display: "var(--font-display)", mono: "var(--font-mono)" } as const;
+const FONT = { sans: "var(--font-sans)", mono: "var(--font-mono)" } as const;
 
 /** Joga as preferências no html como variáveis de CSS; o editor e a página leem daí. */
 export function applyPrefs(p: Prefs) {
