@@ -1,5 +1,3 @@
-<p align="center"><img src="card.svg" alt="Grimo Notes" width="400"></p>
-
 # Grimo Notes
 
 Caderno de ideias local para desktop (Linux e Windows). Pastas por assunto, ideias com tópicos, categorias e prazos, tudo guardado no seu computador, sem conta e sem nuvem.
