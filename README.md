@@ -2,11 +2,9 @@
 
 Caderno de ideias local para desktop (Linux e Windows). Pastas por assunto, ideias com tópicos, categorias e prazos, tudo guardado no seu computador, sem conta e sem nuvem.
 
-**Versão 1.1.2.** O app já funciona de ponta a ponta. Ainda faltam moodboard, captura rápida em janela pequena, histórico de versões e instaladores.
+**Versão 1.1.2.**
 
-## Em uso
-
-Os prints abaixo usam **dados de exemplo inventados** (estudos, viagens, cozinha, trabalho e casa), só para mostrar o app com conteúdo. Dentro do app, em **Configurações > Dados**, o botão **Carregar exemplos** põe o mesmo conjunto, e **Apagar exemplos** remove só o que veio dele. Não há imagens no exemplo: os desenhos são traços feitos dentro do próprio editor.
+## Telas
 
 **Início:** captura rápida, o que vence na semana (atrasadas primeiro), fixadas, pastas e recentes.
 
@@ -82,9 +80,7 @@ Tema, redução de animações, tamanho, largura e fonte do texto, visão padrã
 
 <img src="docs/prints/21-tema-claro.png" alt="Tema claro" width="285"> <img src="docs/prints/22-tema-rosa.png" alt="Tema rosa escuro" width="285"> <img src="docs/prints/23-tema-azul.png" alt="Tema azul escuro" width="285">
 
-Os prints são gerados por `tests/e2e/demo.spec.ts`, o mesmo teste que percorre todas as funções.
-
-## O que já funciona
+## Funcionalidades
 
 - **Pastas** com modelo (Jogo, Mod de Minecraft, Site ou app, Freelance, livre). Cada modelo cria os tópicos de partida.
 - **Ideias** com título, status, prazo, fixar, categorias em grupos e tópicos com checklist.
