@@ -2,7 +2,7 @@
 
 Caderno de ideias local para desktop (Linux e Windows). Pastas por assunto, ideias com tópicos, categorias e prazos, tudo guardado no seu computador, sem conta e sem nuvem.
 
-**Versão 1.1.2.**
+**Versão 1.2.0.**
 
 ## Telas
 

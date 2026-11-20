@@ -1,6 +1,6 @@
 [package]
 name = "grimo-notes"
-version = "1.1.2"
+version = "1.2.0"
 description = "Caderno de ideias local para desktop"
 edition = "2021"
 
