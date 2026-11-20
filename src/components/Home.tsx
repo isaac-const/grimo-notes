@@ -121,7 +121,7 @@ export function Home({ onNewFolder }: { onNewFolder: () => void }) {
               <button key={f.id} type="button" data-folder-card={f.id} onMouseMove={spot} onClick={() => go({ name: 'folder', id: f.id })} className="spot cat-soft grid min-h-[132px] content-between rounded-[22px] border border-line p-5 text-left transition-transform hover:-translate-y-0.5" style={hueStyle(f.hue)}>
                 <span className="cat-ink"><Icon name={f.icon} size={26} /></span>
                 <span>
-                  <b className="block font-display text-2xl leading-tight text-[color:var(--ink)]">{f.name}</b>
+                  <b className="block font-display text-2xl font-medium leading-tight text-[color:var(--ink)]">{f.name}</b>
                   <span className="font-sans text-xs text-[color:var(--ink)] opacity-70">{plural(n, 'ideia', 'ideias')}</span>
                 </span>
               </button>
