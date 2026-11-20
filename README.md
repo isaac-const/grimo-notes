@@ -2,7 +2,7 @@
 
 Caderno de ideias local para desktop (Linux e Windows). Pastas por assunto, ideias com tópicos, categorias e prazos, tudo guardado no seu computador, sem conta e sem nuvem.
 
-**Status: versão 0.1.** O app já funciona de ponta a ponta. Ainda faltam moodboard, captura rápida em janela pequena, histórico de versões e instaladores.
+**Versão 1.1.2.** O app já funciona de ponta a ponta. Ainda faltam moodboard, captura rápida em janela pequena, histórico de versões e instaladores.
 
 ## Em uso
 
